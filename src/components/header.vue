@@ -1,6 +1,7 @@
 <template>
-    <div id="header" @click="aaa">
-        <h1><a href="#">hello</a></h1>
+    <div id="header">
+        <h1><a href="../iconfont/list.html"  >hello</a></h1>
+        <div>按钮</div>
 
     </div>
 </template>
