@@ -1,3 +1,27 @@
+## 参考<a href=" https://github.com/bluefox1688/vue-cli-multi-page">github</a>进行部分修改
+- css预处理语言版本更换 采用scss作为主要使用的预处理语言
+- Vue版本更新至最新版本
+- /src/assets/js/common.js不作为公共库直接引入项目 需要使用时可自行引入
+- 直接采用axios作为Http处理模块 需要使用时自行引入
+- 将常用工具方法提取到/src/assets/js/tool.js 中 按需引入
+- 新建文件/src/assets/js/app.js 作为公共直接引入模块
+
+## 路由使用说明
+
+路由位置 | 说明|备注
+---|---|---
+/src/views | 为主视图路由|无
+/src/view/subject | 为活动专题页面所有路由|无
+/src/view/diathesis | 为素养线页面所有路由|无
+/src/view/scores | 为提分线页面所有路由|无
+/src/view/programme | 为生涯规划页面所有路由|无
+/src/view/Business | 为B端页面所有路由|无
+
+
+
+
+
+
 ## 使用前注意事项
 
 1、直接使用 `cnpm`可能会导致依赖不正确。强烈建议给 `npm` 设置 taobao 的 registry。

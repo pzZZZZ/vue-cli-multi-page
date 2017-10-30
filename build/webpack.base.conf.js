@@ -35,7 +35,9 @@ var webpackConfig = {
       '@': resolve('src'),
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'directive': path.resolve(__dirname, '../src/directive'),
+      'components': path.resolve(__dirname, '../src/components'),
+      'libs': path.resolve(__dirname, '../src/assets/libs')
     }
   },
   module: {
