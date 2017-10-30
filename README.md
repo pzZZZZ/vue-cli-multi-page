@@ -5,7 +5,17 @@
 - 直接采用axios作为Http处理模块 需要使用时自行引入
 - 将常用工具方法提取到/src/assets/js/tool.js 中 按需引入
 - 新建文件/src/assets/js/app.js 作为公共直接引入模块
-
+- 新增/src/directive 作为自定义指令目录
+- 新增目录/src/libs/作为外链库公共目录
+- 默认不全局注册VUX UI {AlertPlugin,LoadingPlugin} 需要时自行在本文件js中加入
+```
+//注册时，vux必须放在 import Vue from 'vue'; 之前，否侧打包的体积非常大，估计是vux OR vue 抽风了
+import { AlertPlugin,LoadingPlugin  } from 'vux'
+//------ VUX UI 注册，如果不需要  VUX UI 请删除以下注册 -------
+Vue.use(AlertPlugin); //全局注册alert事件，注册之后，不需要每个页面都import alert
+Vue.use(LoadingPlugin ); //全局注册alert事件，注册之后，不需要每个页面都import alert
+//--- VUX UI 注册 END --
+```
 ## 路由使用说明
 
 路由位置 | 说明|备注
@@ -16,8 +26,11 @@
 /src/view/scores | 为提分线页面所有路由|无
 /src/view/programme | 为生涯规划页面所有路由|无
 /src/view/Business | 为B端页面所有路由|无
+/src/view/mentality | 为心理线页面所有路由|无
 
 
+## 设置默认打开页面
+在`/build/dev-server.js`中找到第68行自行设置默认打开页面
 
 
 
