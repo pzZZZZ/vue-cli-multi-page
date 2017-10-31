@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <div class="scrollbox">
-
+      <img src="./assets/math.png" alt="">
       <div class="header">
 
       </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="title">
 
-          <span>期中模拟卷讲解</span>
+          <span>期中模拟卷讲解z</span>
 
         </div>
         <div class="tab1 tab">
@@ -283,7 +283,7 @@ body {
 }
 
 .header {
-  background: url('../../../assets/images/headimg.png') no-repeat;
+  background: url('./assets/down.png') no-repeat;
   height: 2.77rem;
   background-size: cover;
   margin-bottom: 0.7rem;
@@ -296,21 +296,21 @@ body {
   .up {
     height: 0.45rem;
     width: 100%;
-    background: url('../../../assets/images/up.png') no-repeat;
+    // background: url('./static/images/up.png') no-repeat;
     background-size: cover;
     position: relative;
     top: 0.03rem;
   }
   .down {
     width: 100%;
-    background: url('../../../assets/images/down1.png') no-repeat;
+    // background: url('./static/images/down1.png') no-repeat;
     background-size: cover;
     height: 0.45rem;
     position: relative;
     top: -0.03rem;
   }
   .title {
-    background: url('../../../assets/images/textbox.png') no-repeat;
+    // background: url('./static/images/textbox.png') no-repeat;
     height: 0.71rem;
     width: 3.05rem;
     position: absolute;
@@ -497,13 +497,13 @@ body {
   .up {
     height: 0.45rem;
     width: 100%;
-    background: url('../../../assets/images/up.png') no-repeat;
+    // background: url('./static/images/up.png') no-repeat;
     background-size: cover;
     position: relative;
     top: 0.03rem;
   }
   .title {
-    background: url('../../../assets/images/textbox.png') no-repeat;
+    // background: url('./static/images/textbox.png') no-repeat;
     height: 0.71rem;
     width: 3.05rem;
     position: absolute;
@@ -577,7 +577,7 @@ body {
   }
   .down {
     width: 100%;
-    background: url('../../../assets/images/down1.png') no-repeat;
+    // background: url('./static/images/down1.png') no-repeat;
     background-size: cover;
     height: 0.45rem;
     position: relative;

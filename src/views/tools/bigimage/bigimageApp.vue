@@ -1,20 +1,21 @@
 <template>
   <div class="mainWarp">
-	<hb-head headfont="图片"></hb-head>
-    
+    <hb-head headfont="图片"></hb-head>
+
     <div class="bgfff martop10 pad10 font14 color666">
-    	<p>
-    		这里展示了多页面模块下放静态文件
-    	</p>
+      <p>
+        这里展示了多页面模块下放静态文件
+      </p>
 
     </div>
-    
-    <div class="martop10">
-    	<img src="./assets/bg.jpg" alt="" />
-    </div>
-    
 
-    
+    <div class="martop10" :style="note">
+
+    </div>
+    <img src="./assets/bg.jpg" alt="" />
+    <img src="./assets/math.png" alt="" />
+    <!-- <img src="./assets/headimg.png" alt="" /> -->
+
   </div>
 </template>
 
@@ -29,9 +30,12 @@ export default {
   components: {
     HbHead
   },
-  data () {
+  data() {
     return {
-      
+      note: {
+        backgroundImage: "url(" + require("./assets/headimg.png") + ")",
+        height: "100px"
+      }
     }
   },
   methods: {
@@ -41,9 +45,7 @@ export default {
 </script>
 
 <style lang="less">
-
-img{
-	max-width:100%;
+img {
+  max-width: 100%;
 }
-
 </style>
