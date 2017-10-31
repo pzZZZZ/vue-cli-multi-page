@@ -1,4 +1,4 @@
-## 参考<a href=" https://github.com/bluefox1688/vue-cli-multi-page">github</a>进行部分修改
+## 参考[github](https://github.com/bluefox1688/vue-cli-multi-page/)</a>进行部分修改
 - css预处理语言版本更换 采用scss作为主要使用的预处理语言
 - Vue版本更新至最新版本
 - /src/assets/js/common.js不作为公共库直接引入项目 需要使用时可自行引入
@@ -6,8 +6,10 @@
 - 将常用工具方法提取到/src/assets/js/tool.js 中 按需引入
 - 新建文件/src/assets/js/app.js 作为公共直接引入模块
 - 新增/src/directive 作为自定义指令目录
-- 新增目录/src/libs/作为外链库公共目录
-- 默认不全局注册VUX UI {AlertPlugin,LoadingPlugin} 需要时自行在本文件js中加入
+- 新增目录/src/libs/作为外链库公共目录[不需要已删除]
+- 默认不全局注册VUX UI {AlertPlugin,LoadingPlugin}
+- 需要时自行在本文件js中加入
+- 新增/src/assets/images/目录作为图片文件夹
 ```
 //注册时，vux必须放在 import Vue from 'vue'; 之前，否侧打包的体积非常大，估计是vux OR vue 抽风了
 import { AlertPlugin,LoadingPlugin  } from 'vux'
