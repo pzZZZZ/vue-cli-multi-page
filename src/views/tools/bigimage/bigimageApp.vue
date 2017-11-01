@@ -9,9 +9,7 @@
 
     </div>
 
-    <div class="martop10" :style="note">
 
-    </div>
     <img src="./assets/bg.jpg" alt="" />
     <img src="./assets/math.png" alt="" />
     <!-- <img src="./assets/headimg.png" alt="" /> -->
@@ -32,10 +30,10 @@ export default {
   },
   data() {
     return {
-      note: {
-        backgroundImage: "url(" + require("./assets/headimg.png") + ")",
-        height: "100px"
-      }
+      // note: {
+      //   backgroundImage: "url(" + require("./assets/headimg.png") + ")",
+      //   height: "100px"
+      // }
     }
   },
   methods: {

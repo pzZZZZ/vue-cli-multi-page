@@ -4,10 +4,12 @@ var webpack = require('webpack')
 var config = require('../config')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+// var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+
+// var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 var entries =  utils.getMultiEntry('./src/'+config.moduleName+'/**/**/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
@@ -88,6 +90,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       chunks: chunks,
 	  	minChunks: 4 || chunks.length 
     }),
+    // new CopyWebpackPlugin([
+    //   { from: 'src/views/libs/**/*',to:'libs/' },
+    // ]),
 	/*
     // copy custom static assets
     new CopyWebpackPlugin([

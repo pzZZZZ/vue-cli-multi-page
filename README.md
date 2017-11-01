@@ -9,7 +9,7 @@
 - 新增目录/src/libs/作为外链库公共目录[不需要已删除]
 - 默认不全局注册VUX UI {AlertPlugin,LoadingPlugin}
 - 需要时自行在本文件js中加入
-- 新增/src/assets/images/目录作为图片文件夹
+- 引入copy-webpack-plugin 做CDN模块抽离
 ```
 //注册时，vux必须放在 import Vue from 'vue'; 之前，否侧打包的体积非常大，估计是vux OR vue 抽风了
 import { AlertPlugin,LoadingPlugin  } from 'vux'

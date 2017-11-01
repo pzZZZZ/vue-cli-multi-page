@@ -1,8 +1,8 @@
 <template>
   <div id="wrapper">
     <div class="scrollbox">
-      <img src="./assets/math.png" alt="">
-      <div class="header">
+
+      <div class="header" :style="note">
 
       </div>
       <div class="mainbox">
@@ -195,7 +195,9 @@ import IScroll from 'iscroll';
 export default {
   data() {
     return {
-
+      note: {
+        backgroundImage: "url(" + require("./assets/headimg.png") + ")"
+      }
     }
   },
   mounted() {
@@ -283,27 +285,23 @@ body {
 }
 
 .header {
-  background: url('./assets/down.png') no-repeat;
+  // background: url('./assets/down.png') no-repeat;
   height: 2.77rem;
   background-size: cover;
-  margin-bottom: 0.7rem;
-  animation: bounceIn 0.7s ease-in-out;
+  margin-bottom: 0.7rem; // animation: bounceIn 0.7s ease-in-out;
 }
 
 .mainbox {
-  position: relative;
-  animation: slideInLeft 0.7s ease-in-out;
+  position: relative; // animation: slideInLeft 0.7s ease-in-out;
   .up {
     height: 0.45rem;
-    width: 100%;
-    // background: url('./static/images/up.png') no-repeat;
+    width: 100%; // background: url('./static/images/up.png') no-repeat;
     background-size: cover;
     position: relative;
     top: 0.03rem;
   }
   .down {
-    width: 100%;
-    // background: url('./static/images/down1.png') no-repeat;
+    width: 100%; // background: url('./static/images/down1.png') no-repeat;
     background-size: cover;
     height: 0.45rem;
     position: relative;
@@ -461,19 +459,21 @@ body {
             flex: 1;
             padding-left: 0.22rem;
             position: relative; // background: greenyellow;
+            display: flex;
+            flex-direction: column;
             h1 {
               width: 2.8rem;
               color: #333333;
               font-size: 0.2rem;
             }
             .godetail {
-              // background: red;
-              position: absolute;
-              top: 10px; // bottom: 0.2rem;
-              right: 0.4rem; // display: flex;
-              // flex-direction: column;
-              // justify-content: flex-end;
+
+              // position: absolute;
+              // top: 10px; 
+              // right: 0.4rem;
+              // height: 20px;
               a {
+
                 font-size: 0.16rem; // line-height: 0.3rem;
                 color: #3b80f8; // border-radius: 0.34rem;
                 // border: 1px solid #3b80f8;
@@ -492,12 +492,10 @@ body {
 
 .fuxi {
   position: relative;
-  margin-top: 0.6rem;
-  animation: slideInLeft 0.7s ease-in-out;
+  margin-top: 0.6rem; // animation: slideInLeft 0.7s ease-in-out;
   .up {
     height: 0.45rem;
-    width: 100%;
-    // background: url('./static/images/up.png') no-repeat;
+    width: 100%; // background: url('./static/images/up.png') no-repeat;
     background-size: cover;
     position: relative;
     top: 0.03rem;
@@ -551,8 +549,7 @@ body {
     }
     .tab {
       display: none;
-      padding-top: 0.4rem;
-      animation: fadeIn 0.7s ease-in-out;
+      padding-top: 0.4rem; // animation: fadeIn 0.7s ease-in-out;
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -576,8 +573,7 @@ body {
     }
   }
   .down {
-    width: 100%;
-    // background: url('./static/images/down1.png') no-repeat;
+    width: 100%; // background: url('./static/images/down1.png') no-repeat;
     background-size: cover;
     height: 0.45rem;
     position: relative;
