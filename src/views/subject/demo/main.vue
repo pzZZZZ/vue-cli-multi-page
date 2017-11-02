@@ -31,10 +31,11 @@
 <script>
 import 'assets/js/Lib';
 import tools from 'assets/js/tool'
+import data from './assets/data'
 import BScroll from 'better-scroll'
 import animatedInteger from 'components/tew'
 import { TransferDom, Actionsheet, Group, XSwitch, Toast } from 'vux'
-console.log(tools)
+import './assets/a'
 export default {
   components: {
     Actionsheet,
@@ -44,17 +45,7 @@ export default {
     animatedInteger
   },
   data() {
-    return {
-      show: true,
-      show7: false,
-      menu7: {
-        menu1: '北京烤鸭',
-        menu2: '陕西油泼面',
-        menu3: '西安肉夹馍'
-      },
-      firstNumber: 20,
-      secondNumber: 40
-    }
+    return data
   },
   computed: {
     result: function() {
@@ -77,42 +68,5 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.box {
-  flex: 1;
-  overflow: hidden;
-  .wrapper {
-    height: 100%;
-  }
-}
-
-.footer {
-  height: 40px;
-  background: orange;
-}
-
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
-
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+@import './assets/app.scss'
 </style>
