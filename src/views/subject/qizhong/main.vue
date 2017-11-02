@@ -185,25 +185,85 @@
         <div class="down"></div>
 
       </div>
+      <actionsheet v-model="show7" :menus="menu7" theme="ios" >
+      </actionsheet>
     </div>
   </div>
 </template>
+<i18n>
+Prevent auto closing:
+  zh-CN: 不自动关闭
+Close me:
+  zh-CN: 点我关闭
+Deleted~:
+  zh-CN: 删除成功
+'Slot: header':
+  zh-CN: 使用 header slot
+Basic Usage:
+  zh-CN: 基本使用
+Android Theme:
+  zh-CN: 安卓风格
+Show cancel menu:
+  zh-CN: 显示取消菜单
+Menu as tips:
+  zh-CN: 显示提示文字
+Prevent closing when clicking mask:
+  zh-CN: 点击遮罩区域不自动关闭
+Share to friends:
+  zh-CN: 分享给朋友
+Share to timeline:
+  zh-CN: 分享到朋友圈
+Take Photo:
+  zh-CN: 拍照
+Choose from photos:
+  zh-CN: 从相册选择
+Actionsheet header:
+  en: 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>'
+  zh-CN: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
+'<span style="color:red">Delete</span>':
+  zh-CN: '<span style="color:red">删除</span>'
+Array menu:
+  zh-CN: 使用数组定义菜单
+</i18n>
 <script>
-import Lib from 'assets/js/app';
+import 'assets/js/Lib';
 import IScroll from 'iscroll';
+import { TransferDom, Actionsheet, Group, XSwitch, Toast } from 'vux'
+
 
 export default {
+  components: {
+    Actionsheet,
+    Group,
+    XSwitch,
+    Toast
+  },
   data() {
     return {
       note: {
         backgroundImage: "url(" + require("./assets/headimg.png") + ")"
-      }
+      },
+      show7: true,
+      menu7: {
+        menu1: '北京烤鸭',
+        menu2: '陕西油泼面',
+        menu3: '西安肉夹馍'
+      },
     }
   },
   mounted() {
-    // var myScroll = new IScroll(wrapper);
-    new IScroll.iScroll(wrapper)
 
+    new IScroll.iScroll(wrapper)
+    // this.$vux.alert.show({
+    //   title: 'Vux is Cool',
+    //   content: 'Do you agree?',
+    //   onShow() {
+    //     console.log('Plugin: I\'m showing')
+    //   },
+    //   onHide() {
+    //     console.log('Plugin: I\'m hiding')
+    //   }
+    // })
   }
 }
 </script>

@@ -55,6 +55,15 @@ let tools = {
             return unescape(RegExp.$2.replace(/\+/g, " "));
         return "";
 
+    },
+    getAndroid() {
+        //返回当前安卓版本
+        let userAgent = navigator.userAgent;
+        let index = userAgent.indexOf("Android")
+        if (index >= 0) {
+            let androidVersion = parseFloat(userAgent.slice(index + 8));
+            return androidVersion
+        }
     }
 
 };

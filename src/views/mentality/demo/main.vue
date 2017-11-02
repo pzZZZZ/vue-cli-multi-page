@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import init from 'assets/js/app'
+import   'assets/js/Lib';
 export default {
 
 }
