@@ -8,8 +8,10 @@
   .box {
     flex: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
     .wrapper {
-      height: 100%;
+      flex:1;
     }
   }
   
